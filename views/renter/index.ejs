@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <%- include('../partial/head') %>
+    </head>
+    <body>
+        <div id="app" class="container">
+            <table class="table table-striped">
+                <thead>
+                    <th>No</th>
+                    <th>Full Name</th>
+                    <th>Identity Type</th>
+                    <th>Identity Number</th>
+                    <th>Gender</th>
+                    <th>Born Year</th>
+                    <th>Phone Number</th>
+                    <th>Dorm</th>
+                </thead>
+                <tbody>
+                    <tr v-for="item, i in data">
+                        <td>{{ i + 1 }}</td>
+                        <td>{{ item.fullName }}</td>
+                        <td>{{ item.identityType }}</td>
+                        <td>{{ item.identityNo }}</td>
+                        <td>{{ item.gender == 1 ? 'Male' : 'Female' }}</td>
+                        <td>{{ item.bornYear }}</td>
+                        <td>{{ item.phoneNumber }}</td>
+                        <td>Dorm nyah</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+
+    <script>
+        <%- include('custom.js') %>
+    </script>
+
+</html>
